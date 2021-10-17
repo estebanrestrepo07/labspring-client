@@ -40,4 +40,24 @@ h1{
  font-family: Avenir, Arial;
  color: white;
 }
+#contenedor {
+   position:relative;
+    height:150px;
+    width:800px;
+    margin:0 auto;
+    top:40px;
+}
+#contenedor .form-control{
+  top:60px;
+  left:60px;
+  margin-top:30px;
+}
+.col-sm-10
+{
+  top:60px;
+  left:70px;
+   margin:0 auto;
+  margin-top:30px;
+  
+}
 </style>
