@@ -124,7 +124,7 @@ export default {
   data(){
     return{
       empleado:{
-        documento:null,
+        empleadoId:null,
         nombreCompleto:null,
         email:null,
         cargo:null,
@@ -149,7 +149,8 @@ export default {
         body:JSON.stringify(this.empleado),
         headers:{
           'Accept':'application/json',
-          'Content-Type':'application/json'
+          'Content-Type':'application/json',
+          'Access-Control-Allow-Origin':'*'
         }
       })
     }

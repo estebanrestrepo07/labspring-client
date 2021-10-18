@@ -136,7 +136,7 @@
                 this.empleado.salario=parseFloat(this.empleado.salario);
 
                 fetch('https://lanspring-udea.herokuapp.com/update',{
-                    method:'PUT',
+                    method:'POST',
                     body:JSON.stringify(this.empleado),
                     headers:{
                         'Accept':'application/json',
