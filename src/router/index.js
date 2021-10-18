@@ -1,29 +1,27 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Router from 'vue-router'
+import Ingresar from '../views/Ingresar.vue'
+import Actualizar from '../views/Actualizar.vue'
+import Lista from "../views/Lista";
 
-Vue.use(VueRouter)
+Vue.use(Router);
+export default new Router({
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/listaTrabajadores',
-    name: 'listaTrabajadores',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/listaTrabajadores.vue')
-  }
-]
-
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+    routes:[
+        {
+            path:'/',
+            name:'/lista',
+            component:Lista
+        },
+        {
+            path:'/ingresar',
+            name:'/ingresar',
+            component:Ingresar
+        },
+        {
+            path:'/actualizar/:Emp',
+            name:'/actualizar',
+            component:Actualizar
+        }
+    ]
 })
-
-export default router
